@@ -4,12 +4,6 @@ spring:
 #端口
 server:
   port: 8999
-# Additional server ports specified with Armeria configuration.
-armeria:
-  ports:
-    - port: 8999
-      protocols:
-        - http
 #注册的地址
 eureka:
   instance:
