@@ -18,14 +18,10 @@ management:
         include: '*'
   endpoint:
     logfile:
-      external-file: ${user.home}/logs/bootadmin-info.log
+      external-file: ${user.home}/logs/zipkin-info.log
     health:
       show-details: ALWAYS
   metrics:
-    web:
-      server:
-        # 避免访问 zipkin 页面报 java.lang.IllegalArgumentException
-        auto-time-requests: false
     tags:
       application: ${spring.application.name}
       hikaricp: ${spring.datasource.poolName}
