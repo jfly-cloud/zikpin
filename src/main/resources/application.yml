@@ -1,0 +1,12 @@
+#本服务名字
+spring:
+  main:
+    # 让应用以非web服务方式启动 server.port配置将会失效
+    web-application-type: none
+  profiles:
+    active: local
+  application:
+    name: zipkin
+server:
+  compression:
+    enabled: true

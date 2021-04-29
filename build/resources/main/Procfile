@@ -1,0 +1,1 @@
+web: java -Dfile.encoding=UTF-8 -Xms768m -Xmx768m -jar jcloud-zipkin-1.0.0.jar
