@@ -4,12 +4,6 @@ spring:
 #端口
 server:
   port: 5000
-# Additional server ports specified with Armeria configuration.
-armeria:
-  ports:
-    - port: 5000
-      protocols:
-        - http
 #注册的地址
 eureka:
   instance:

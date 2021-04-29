@@ -23,8 +23,8 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'io.zipkin.java:zipkin-server:2.12.9'
-    implementation 'io.zipkin.java:zipkin-autoconfigure-ui:2.12.9'
+    implementation 'io.zipkin.java:zipkin-server:2.12.3'
+    implementation 'io.zipkin.java:zipkin-autoconfigure-ui:2.12.3'
     annotationProcessor 'org.projectlombok:lombok:1.18.16'
     compileOnly 'org.projectlombok:lombok:1.18.16'
     implementation 'org.springframework.boot:spring-boot-starter-log4j2'
