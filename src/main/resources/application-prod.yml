@@ -1,15 +1,19 @@
 spring:
   config:
     name: prod
+#端口
+server:
+  port: 5000
 #注册的地址
 eureka:
   instance:
     lease-expiration-duration-in-seconds: 15 #服务过期时间配置
     lease-renewal-interval-in-seconds: 5 #服务刷新时间配置
-    hostname: bootadmin
+    prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone:  http://admin:admin**123@eureka1:8761/eureka,http://admin:admin**123@eureka2:8761/eureka
+      defaultZone: http://eureka-prod.ap-southeast-1.elasticbeanstalk.com/eureka
+    registry-fetch-interval-seconds: 5 #client刷新本地缓存时间
 #公开了prometheus,health,info,logfile
 management:
   endpoints:

@@ -1,1 +1,1 @@
-web: java -Dfile.encoding=UTF-8 -Xms1g -Xmx1g -jar zipkin.jar
+web: java -Dfile.encoding=UTF-8 -Xms4g -Xmx4g -jar zipkin.jar
