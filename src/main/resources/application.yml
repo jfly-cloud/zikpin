@@ -7,3 +7,11 @@ armeria:
     - port: 5000
       protocols:
         - http
+  compression:
+    enabled: true
+    # compresses any response over min-response-size (default is 2KiB)
+    # Includes dynamic json content and large static assets from zipkin-ui
+    mime-types: application/json,application/javascript,text/css,image/svg
+    min-response-size: 2048
+  gracefulShutdownQuietPeriodMillis: -1
+  gracefulShutdownTimeoutMillis: -1
