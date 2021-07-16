@@ -1,17 +1,5 @@
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.4.RELEASE")
-    }
-}
-ext { springBootVersion = '2.1.4.RELEASE' }
 apply plugin: 'java'
 //apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
 // 指定JDK版本
 sourceCompatibility = 11
 targetCompatibility = 11
@@ -22,28 +10,11 @@ repositories {
 
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'io.zipkin.java:zipkin-server:2.12.3'
-    implementation 'io.zipkin.java:zipkin-autoconfigure-ui:2.12.3'
-    annotationProcessor 'org.projectlombok:lombok:1.18.16'
-    compileOnly 'org.projectlombok:lombok:1.18.16'
-    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-    implementation 'com.thoughtworks.xstream:xstream:1.4.16'
-
+    implementation 'io.zipkin:zipkin-server:2.23.2'
 }
 
 configurations {
-    all*.exclude module: 'spring-boot-starter-logging'
-    all*.exclude module: "logback-classic"
-    all*.exclude module: 'spring-boot-starter-tomcat'
-}
-
-dependencyManagement {
-    imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Greenwich.SR6"
-    }
+    all*.exclude module: 'spring-boot-starter-log4j2'
 }
 
 task copy(type: Copy){
