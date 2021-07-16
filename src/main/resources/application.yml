@@ -1,6 +1,9 @@
 #本服务名字
 spring:
-  profiles:
-    active: local
   application:
     name: zipkin
+armeria:
+  ports:
+    - port: 5000
+      protocols:
+        - http
