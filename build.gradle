@@ -1,4 +1,15 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.4.6")
+    }
+}
+
 apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
 //apply plugin: 'eclipse'
 // 指定JDK版本
 sourceCompatibility = 11
