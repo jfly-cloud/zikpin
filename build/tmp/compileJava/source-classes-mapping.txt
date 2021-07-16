@@ -1,2 +1,0 @@
-com/jcloud/zipkin/ZipkinServerApplication.java
- com.jcloud.zipkin.ZipkinServerApplication
